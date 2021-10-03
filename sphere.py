@@ -1,5 +1,8 @@
 import math # Makes the math library available
 
+def selection():
+    return 1
+
 def surfaceArea(radius):
     surface=round((4 * math.pi * radius**2), 2)
     return surface

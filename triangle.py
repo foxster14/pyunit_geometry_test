@@ -1,19 +1,32 @@
+import abc
 import math
 
-def main():
-    side_a = eval(input("Please enter the first side of a triangle: "))
-    side_b = eval(input("Please enter the second side of a triangle: "))
-    side_c = eval(input("Please enter the third side of a triangle: "))
-    print()
-    #
-    perimeter = float(side_a + side_b + side_c)
+def perimeter(side1, side2, side3):
+    perimeter = side1 + side2 + side3
+    return perimeter
+
+def semiPerimeter(perimeter):
     semi_perimeter = perimeter / 2
-    s = semi_perimeter # Temp value
-    surface_area = float(math.sqrt(s * (s - side_a) * (s - side_b) * (s - side_c)))
-    #
-    print("The perimeter of a triangle = ",perimeter)
-    print("The semi-perimeter of a triangle = ", semi_perimeter)
-    print("The area of a triangle = ",round(surface_area,2))
+    return semi_perimeter
+
+def surfaceArea(s, side1, side2, side3):
+    surface_area = math.sqrt(s * (s - side1) * (s - side2) * (s - side3))
+    return surface_area
+
+
+def main():
+    side1 = eval(input("Please enter the first side of a triangle: "))
+    side2 = eval(input("Please enter the second side of a triangle: "))
+    side3 = eval(input("Please enter the third side of a triangle: "))
+    print()
+
+    p = perimeter(side1, side2, side3)
+    s = semiPerimeter(p)
+    a = surfaceArea(s, side1, side2, side3)
+    
+    print("The perimeter of a triangle = ", float(p))
+    print("The semi-perimeter of a triangle = ", s)
+    print("The area of a triangle = ",round(a,2))
 
 if __name__ == '__main__':
     main()

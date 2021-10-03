@@ -1,21 +1,18 @@
 import unittest
-import cylinder 
+import cuboid
 
 ## Since these are all floats & are not rounded at the time of declaration
 ## The tests will fail if the answer is too specific
 class triangleTest(unittest.TestCase):
 
     def test_area(self):
-        assert(cylinder.surfaceArea(5,4) >= 282)
+        assert(cuboid.surfaceArea(8) == 384)
 
     def test_volume(self):
-        assert(cylinder.volume(5,4) >= 314)
+        assert(cuboid.volume(8) == 512)
     
     def test_lateral(self):
-        assert(cylinder.lateral(5,4) >= 125)
-    
-    def test_base(self):
-        assert(cylinder.base(5) >= 78)
+        assert(cuboid.lateralSurfaceArea(8) == 256)
 
 if __name__ == '__main__':
     unittest.main()

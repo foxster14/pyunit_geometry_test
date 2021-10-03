@@ -11,6 +11,9 @@ def header(string):
     line="-" * 55 
     print(line, "\nPYTHON PROGRAM TO FIND", string, "\n" + line)
 
+def userSelection(selection):
+    return selection
+
 def main():
 
     while True:
@@ -24,6 +27,7 @@ def main():
         print("6. Trapezoid")
         print("7. Cuboid")
         print("0. Quit")
+        selection = userSelection(selection)
         selection = int(input("Please enter your selection: "))
         if selection == 0:
             break
