@@ -51,4 +51,5 @@ def main():
         else:
             print("Invalid selection, please try again.")
 
-main()
+if __name__ == '__main__':
+    main()
